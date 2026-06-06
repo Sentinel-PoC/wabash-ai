@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Classes"
+  description="Free and low-cost community AI training hosted in Wabash, Indiana. Sign up to hear about upcoming sessions."
+>
+
+  <!-- Page header -->
+  <div class="mb-10">
+    <p class="text-amber-600 text-sm font-semibold uppercase tracking-widest mb-2">Community Training</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+      Classes
+    </h1>
+    <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
+      Free and low-cost AI training, hosted locally in Wabash. These sessions are designed for
+      small business owners and nonprofit staff — no technical background required.
+    </p>
+  </div>
+
+  <!-- Scheduling notice -->
+  <section class="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-12">
+    <h2 class="text-lg font-semibold text-gray-900 mb-2">Classes are being scheduled</h2>
+    <p class="text-gray-600 leading-relaxed mb-4">
+      Sessions are currently in planning for later this year. Topics under consideration include:
+    </p>
+    <ul class="space-y-2 text-gray-600 text-sm mb-5">
+      <li class="flex items-start gap-2">
+        <span class="text-amber-500 mt-0.5">&#9679;</span>
+        <span><strong>AI Basics for Business Owners</strong> — What generative AI tools do, what they don't do, and how to try them without spending money.</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-amber-500 mt-0.5">&#9679;</span>
+        <span><strong>AI for Nonprofits</strong> — Grant writing drafts, donor communications, volunteer coordination, and more. Hands-on with free tools.</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-amber-500 mt-0.5">&#9679;</span>
+        <span><strong>Practical Prompting Workshop</strong> — Getting consistently useful answers out of AI tools. Small group, hands-on format.</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-amber-500 mt-0.5">&#9679;</span>
+        <span><strong>AI Honestly: What It Gets Wrong</strong> — Understanding hallucinations, bias, and how to use AI tools safely. Critical literacy for anyone relying on AI output.</span>
+      </li>
+    </ul>
+    <p class="text-gray-500 text-sm">
+      Sessions will be free or at minimal cost. Held in Wabash — venue and dates to be announced.
+    </p>
+  </section>
+
+  <!-- Interest signup -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Get notified when classes are scheduled</h2>
+    <p class="text-gray-600 leading-relaxed mb-6">
+      Send an email to express your interest and we'll let you know when sessions are announced.
+      Let us know what topic you're most interested in — that helps prioritize what gets scheduled first.
+    </p>
+
+    <div class="border border-gray-200 rounded-xl p-6 bg-gray-50">
+      <p class="text-gray-700 font-medium mb-3">Send your interest to:</p>
+      <a
+        href="mailto:classes@wabash.ai?subject=AI%20Class%20Interest&body=Hi%2C%0A%0AI%27m%20interested%20in%20attending%20an%20AI%20class%20in%20Wabash.%0A%0ATopic%20I%27m%20most%20interested%20in%3A%20%5Bwrite%20here%5D%0AMy%20organization%3A%20%5Bbusiness%20or%20nonprofit%20name%5D%0A%0AThanks!"
+        class="inline-block bg-amber-600 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+      >
+        classes@wabash.ai
+      </a>
+      <p class="text-gray-400 text-xs mt-3">
+        No mailing list, no marketing. Just a notification when sessions open.
+      </p>
+    </div>
+  </section>
+
+  <!-- Format / what to expect -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">What to expect</h2>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="border border-gray-100 rounded-xl p-5">
+        <div class="text-2xl mb-3">&#128202;</div>
+        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Small groups</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">
+          Sessions are kept small so there's time for questions and hands-on practice, not just slides.
+        </p>
+      </div>
+      <div class="border border-gray-100 rounded-xl p-5">
+        <div class="text-2xl mb-3">&#128176;</div>
+        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Free or low-cost</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">
+          Community offering. No consulting sales pitch at the end.
+        </p>
+      </div>
+      <div class="border border-gray-100 rounded-xl p-5">
+        <div class="text-2xl mb-3">&#128736;</div>
+        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Practical focus</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">
+          Emphasis on tools you can use immediately, in your actual work — not theory.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA to other pages -->
+  <section class="border-t border-gray-100 pt-8">
+    <p class="text-gray-500 text-sm">
+      While you wait for classes, check out the
+      <a href="/learn" class="text-amber-600 hover:text-amber-700 font-medium">Learn page</a>
+      for free resources you can explore on your own, or
+      <a href="/get-involved" class="text-amber-600 hover:text-amber-700 font-medium">Get Involved</a>
+      to join the community conversation.
+    </p>
+  </section>
+
+</Layout>

@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'wabash.ai',
+  description = 'A community resource for AI literacy in Wabash, Indiana.',
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/why-ai', label: 'Why AI' },
+  { href: '/learn', label: 'Learn' },
+  { href: '/classes', label: 'Classes' },
+  { href: '/get-involved', label: 'Get Involved' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title === 'wabash.ai' ? title : `${title} | wabash.ai`}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-gray-900 min-h-screen flex flex-col font-sans">
+
+    <!-- Header: sticky, blurred -->
+    <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold tracking-tight text-amber-600 hover:text-amber-700 transition-colors">
+          wabash.ai
+        </a>
+        <nav class="hidden sm:flex gap-6 text-sm font-medium text-gray-600">
+          {navLinks.map(link => (
+            <a
+              href={link.href}
+              class="hover:text-amber-600 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <!-- Mobile nav -->
+        <nav class="sm:hidden flex gap-4 text-sm font-medium text-gray-600">
+          {navLinks.slice(1).map(link => (
+            <a href={link.href} class="hover:text-amber-600 transition-colors">
+              {link.label.split(' ')[0]}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="flex-1 max-w-5xl mx-auto w-full px-4 py-10">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 bg-gray-50 mt-auto">
+      <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-gray-500">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p class="font-medium text-amber-600">wabash.ai</p>
+          <nav class="flex flex-wrap gap-4 text-gray-400">
+            {navLinks.map(link => (
+              <a href={link.href} class="hover:text-gray-600 transition-colors">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <div class="mt-4 pt-4 border-t border-gray-200 space-y-1">
+          <p class="text-gray-400 text-xs">
+            Independent community initiative. Not affiliated with the City of Wabash, Wabash County government, the Honeywell Foundation, Honeywell International, IN AI, WHIN, or any other organization mentioned on this site. Organizations and historical figures are referenced for informational and educational purposes only; no endorsement or partnership is implied.
+          </p>
+          <p class="text-gray-400 text-xs">
+            &copy; {currentYear} wabash.ai. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

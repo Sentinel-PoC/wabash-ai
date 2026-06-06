@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const resources = [
+  {
+    category: "Start here",
+    items: [
+      {
+        title: "What is generative AI, in plain terms",
+        description: "Generative AI tools (like ChatGPT, Claude, Gemini) predict what words or images to produce based on patterns in large amounts of text. They're useful for drafting, summarizing, brainstorming, and answering questions — but they make things up convincingly, so human review is always needed. This is the single most important thing to understand before using any of these tools.",
+        type: "explainer",
+        link: null,
+        linkLabel: null,
+        local: true,
+      },
+      {
+        title: "AI for Small Business — Google's free primer",
+        description: "Google's AI Essentials for small businesses is a free, self-paced resource covering what generative AI tools do, how to write good prompts, and practical use cases for small teams. No technical background required.",
+        type: "free course",
+        link: "https://grow.google/intl/en_us/guide-to-ai-for-small-businesses/",
+        linkLabel: "grow.google",
+        local: false,
+      },
+      {
+        title: "Microsoft's AI for Business Owners (free)",
+        description: "Microsoft offers a free Learning Path called 'Artificial Intelligence for business owners' on Microsoft Learn. Short modules, no coding, covers how to identify tasks where AI saves time and what questions to ask before buying AI products.",
+        type: "free course",
+        link: "https://learn.microsoft.com/en-us/training/paths/ai-business-school-business-strategy/",
+        linkLabel: "learn.microsoft.com",
+        local: false,
+      },
+    ],
+  },
+  {
+    category: "For nonprofits",
+    items: [
+      {
+        title: "5 ways a small nonprofit can use AI today",
+        description: "Grant writing first drafts — AI tools can draft an initial grant narrative from your notes; a human editor refines and verifies. Donor communications — draft thank-you letters or newsletter content quickly. Meeting summaries — several tools transcribe and summarize Zoom/Teams calls. Social media — generate caption drafts and a weekly content calendar. FAQ answers — build a simple Q&A document to respond consistently to common inquiries. None of these require a budget or an IT department.",
+        type: "explainer",
+        link: null,
+        linkLabel: null,
+        local: true,
+      },
+      {
+        title: "TechSoup: AI Resources for Nonprofits",
+        description: "TechSoup curates technology resources specifically for nonprofits, including AI tools available at discounted or donated rates. Their AI resource library covers tool selection, responsible use, and case studies from nonprofits similar in size to Wabash-area organizations.",
+        type: "resource hub",
+        link: "https://www.techsoup.org/topics/artificial-intelligence",
+        linkLabel: "techsoup.org",
+        local: false,
+      },
+      {
+        title: "NTEN: Nonprofit Technology Network — AI resources",
+        description: "NTEN (Nonprofit Technology Network) publishes practical guidance on AI adoption for nonprofit practitioners. Their materials are written for staff who use technology, not technologists — a good fit for small shop operations.",
+        type: "resource hub",
+        link: "https://www.nten.org/",
+        linkLabel: "nten.org",
+        local: false,
+      },
+    ],
+  },
+  {
+    category: "For small businesses",
+    items: [
+      {
+        title: "Practical prompting: getting useful answers out of AI tools",
+        description: "The most common frustration with AI tools is vague or unhelpful responses. The fix is almost always a better prompt. Key principles: (1) Give context — tell it who you are and what you need. (2) Give a format — 'give me three options in bullet points'. (3) Give constraints — 'no longer than 200 words, friendly tone'. (4) Iterate — if the first answer is off, say what's wrong and ask again. This is a skill that improves quickly with practice.",
+        type: "explainer",
+        link: null,
+        linkLabel: null,
+        local: true,
+      },
+      {
+        title: "SBA: Artificial Intelligence Resources for Small Business",
+        description: "The U.S. Small Business Administration has published a free AI resource page covering use cases, risks, and links to free tools relevant to small business owners. Practical starting point from a trusted federal source.",
+        type: "free resource",
+        link: "https://www.sba.gov/blog/artificial-intelligence-resources-small-business-owners",
+        linkLabel: "sba.gov",
+        local: false,
+      },
+    ],
+  },
+  {
+    category: "Understanding AI honestly",
+    items: [
+      {
+        title: "What AI gets wrong — and why that matters for your business",
+        description: "Generative AI tools 'hallucinate' — they produce confident-sounding incorrect information. For a small business or nonprofit, the risks include: wrong legal or tax information, fabricated citations in grant applications, inaccurate product descriptions. Best practice: use AI for tasks where a human will review the output before it goes anywhere important. Never use AI output directly for anything with legal, financial, or safety consequences without expert review.",
+        type: "explainer",
+        link: null,
+        linkLabel: null,
+        local: true,
+      },
+      {
+        title: "Mozilla Foundation: AI explainers for general audiences",
+        description: "Mozilla's AI literacy resources are written for people without technical backgrounds. They cover how AI systems work, data privacy considerations, and how to evaluate AI products critically — useful context before signing up for a paid AI service.",
+        type: "free resource",
+        link: "https://foundation.mozilla.org/en/internet-health/",
+        linkLabel: "foundation.mozilla.org",
+        local: false,
+      },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Learn"
+  description="AI literacy resources for Wabash small businesses and nonprofits — plain-language explainers, free courses, and curated links."
+>
+
+  <!-- Page header -->
+  <div class="mb-10">
+    <p class="text-amber-600 text-sm font-semibold uppercase tracking-widest mb-2">Community Resource</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+      Learn
+    </h1>
+    <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
+      Plain-language AI resources for small businesses and nonprofits.
+      This is a growing collection — entries marked "local explainer" are written for
+      this site; entries with links go to reputable external sources.
+    </p>
+  </div>
+
+  <!-- Resource sections -->
+  {resources.map(section => (
+    <section class="mb-14">
+      <h2 class="text-xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+        {section.category}
+      </h2>
+      <div class="space-y-6">
+        {section.items.map(item => (
+          <div class="border border-gray-100 rounded-xl p-6 hover:border-amber-200 transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="text-base font-semibold text-gray-900">
+                {item.title}
+              </h3>
+              <span class={`shrink-0 text-xs font-medium px-2 py-1 rounded-full ${
+                item.local
+                  ? 'bg-amber-100 text-amber-700'
+                  : 'bg-gray-100 text-gray-600'
+              }`}>
+                {item.type}
+              </span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+              {item.description}
+            </p>
+            {item.link && (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 text-sm font-medium transition-colors"
+              >
+                {item.linkLabel} &#8599;
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <!-- Contributing note -->
+  <section class="bg-amber-50 border border-amber-200 rounded-xl px-6 py-5 mt-6">
+    <h3 class="text-base font-semibold text-gray-900 mb-2">Know a good resource?</h3>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      If you've found an AI learning resource that was genuinely helpful for your small business
+      or nonprofit and you'd like to suggest it for this list,
+      <a href="/get-involved" class="text-amber-600 hover:text-amber-700 font-medium">get in touch</a>.
+      This collection grows through community input.
+    </p>
+  </section>
+
+</Layout>

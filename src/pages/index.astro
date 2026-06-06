@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="wabash.ai"
+  description="A community resource for AI literacy in Wabash, Indiana — hometown of inventors, now embracing the next platform."
+>
+
+  <!-- Hero: amber-to-dark gradient, inventors lineage -->
+  <section class="relative -mx-4 -mt-10 px-4 pt-16 pb-16 mb-12"
+    style="background: linear-gradient(135deg, #1c1917 0%, #451a03 40%, #92400e 70%, #d97706 100%);">
+    <div class="max-w-3xl">
+      <p class="text-amber-300 text-sm font-semibold uppercase tracking-widest mb-4">Wabash, Indiana</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+        A town of inventors<br class="hidden sm:block" />
+        meets the next platform.
+      </h1>
+      <p class="text-amber-100 text-lg max-w-2xl mb-8 leading-relaxed">
+        In 1880, Wabash became the first city in the world to be lit entirely by electricity.
+        The same spirit of early adoption lives here. This is a free community resource to help
+        Wabash small businesses and nonprofits become AI-literate — not left behind.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/learn"
+          class="inline-block bg-amber-500 hover:bg-amber-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center">
+          Start learning
+        </a>
+        <a href="/classes"
+          class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors text-center">
+          Upcoming classes
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission statement -->
+  <section class="mb-12 max-w-2xl">
+    <p class="text-gray-600 text-lg leading-relaxed">
+      <strong class="text-gray-900">wabash.ai</strong> is a community project — not a business pitch.
+      It exists to help local small businesses, nonprofits, and residents understand what
+      AI can actually do for them, and to connect them with free learning and local support.
+    </p>
+  </section>
+
+  <!-- Heritage quote band -->
+  <section class="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-12">
+    <blockquote class="text-gray-700 italic text-lg leading-relaxed">
+      "The city of Wabash, Indiana, is to be congratulated upon being the first city in the world
+      to be lighted by electricity."
+    </blockquote>
+    <p class="text-amber-700 text-sm font-medium mt-3">
+      — Contemporary press accounts of March 31, 1880, when Brush arc lamps were switched on
+      atop the Wabash County Courthouse, illuminating the entire city.
+    </p>
+  </section>
+
+  <!-- Navigation cards -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold text-gray-900 mb-6">Explore</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+
+      <a href="/why-ai"
+        class="group block p-6 border border-gray-200 rounded-xl hover:border-amber-400 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">&#9889;</div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors mb-2">
+          Why AI / Why Now
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          The heritage argument: from Honeywell's heating controls to the 1880 electric lights —
+          Wabash has always adopted new platforms early. Why AI is next, and why small towns can lead.
+        </p>
+      </a>
+
+      <a href="/learn"
+        class="group block p-6 border border-gray-200 rounded-xl hover:border-amber-400 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">&#128218;</div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors mb-2">
+          Learn
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Plain-language AI resources for small businesses and nonprofits. Curated articles,
+          explainers, and links to reputable free learning — no jargon, no hype.
+        </p>
+      </a>
+
+      <a href="/classes"
+        class="group block p-6 border border-gray-200 rounded-xl hover:border-amber-400 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">&#128197;</div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors mb-2">
+          Classes
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Free and low-cost community AI training hosted locally in Wabash.
+          Sign up for interest updates and see what's coming.
+        </p>
+      </a>
+
+      <a href="/get-involved"
+        class="group block p-6 border border-gray-200 rounded-xl hover:border-amber-400 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">&#129309;</div>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors mb-2">
+          Get Involved
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Local businesses and nonprofits: express your interest, share how you're using AI,
+          or join the community conversation.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+</Layout>
